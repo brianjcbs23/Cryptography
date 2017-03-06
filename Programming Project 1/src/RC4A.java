@@ -13,13 +13,6 @@ public class RC4A implements StreamCipher{
     private int j1 = 0;
     private int j2 = 0;
 
-    public byte[] getSkey(){
-        return Skey;
-    }
-    public byte[] getSnonce(){
-        return Snonce;
-    }
-
     /**
      * Returns this stream cipher's key size in bytes. If the stream cipher
      * includes both a key and a nonce, <TT>keySize()</TT> returns the size of
@@ -42,7 +35,7 @@ public class RC4A implements StreamCipher{
      * <TT>decrypt()</TT> will encrypt or decrypt a series of bytes.
      * <P>
      * For class RC4A, bytes <TT>key[0]</TT> through <TT>key[15]</TT> are used as the key
-     * and bytes <TT>key[16]</TT> through <TT>key[31]</TT>.
+     * and bytes <TT>key[16]</TT> through <TT>key[31]</TT> are used as the nonce.
      *
      * @param  key  Key.
      *
